@@ -1,0 +1,71 @@
+import type { PortfolioItem, BlogPost } from '@/types';
+
+export const portfolioItems: PortfolioItem[] = [
+  {
+    id: '1',
+    title: 'E-commerce Platform',
+    description: 'A full-featured e-commerce platform with admin dashboard and payment integration, built with Next.js and Stripe.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'Screenshot of an e-commerce platform dashboard showing sales analytics.',
+    imageHint: 'software interface',
+    liveUrl: '#',
+    githubUrl: '#',
+    tags: ['Next.js', 'React', 'Stripe', 'TypeScript'],
+  },
+  {
+    id: '2',
+    title: 'AI Powered Code Assistant',
+    description: 'A VS Code extension that provides AI-powered code suggestions and autocompletion to boost developer productivity.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'VS Code editor showing AI code suggestions highlighted within a code file.',
+    imageHint: 'code editor',
+    githubUrl: '#',
+    tags: ['AI', 'VS Code', 'TypeScript', 'Machine Learning'],
+  },
+  {
+    id: '3',
+    title: 'Mobile Fitness Tracker',
+    description: 'A cross-platform mobile app for tracking fitness activities, setting goals, and visualizing progress. Developed with React Native.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'Mobile app interface showing a fitness activity summary screen with charts.',
+    imageHint: 'mobile app',
+    liveUrl: '#',
+    tags: ['React Native', 'Mobile App', 'Firebase', 'UI/UX'],
+  },
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Mastering Server Components in Next.js 14',
+    date: 'October 26, 2023',
+    summary: 'A deep dive into Next.js Server Components, exploring their benefits, use cases, and best practices for modern web development.',
+    slug: 'mastering-server-components-nextjs-14',
+    category: 'Next.js',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'Abstract representation of server and client components interacting.',
+    imageHint: 'tech abstract',
+  },
+  {
+    id: '2',
+    title: 'The Future of UI/UX with AI',
+    date: 'November 15, 2023',
+    summary: 'Exploring how artificial intelligence is reshaping user interface and user experience design, from personalization to generative UIs.',
+    slug: 'future-of-ui-ux-with-ai',
+    category: 'AI & Design',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'Futuristic UI design with glowing lines and AI-related icons.',
+    imageHint: 'software interface',
+  },
+  {
+    id: '3',
+    title: 'Clean Code Principles for Junior Developers',
+    date: 'December 05, 2023',
+    summary: 'Essential clean code principles every junior developer should know to write maintainable, readable, and efficient code.',
+    slug: 'clean-code-principles-junior-devs',
+    category: 'Software Development',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'A developer working on a laptop with lines of code visible on the screen.',
+    imageHint: 'coding screen',
+  },
+];
