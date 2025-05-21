@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({ // Corrected instantiation
 });
 
 export const metadata: Metadata = {
-  title: 'Zenith Studio',
-  description: 'Personal blog and portfolio of a creative software developer. Crafted by Zenith Studio.',
+  title: 'Nexus AG',
+  description: 'Personal blog and portfolio of a creative software developer. Crafted by Nexus AG.',
 };
 
 export default function RootLayout({

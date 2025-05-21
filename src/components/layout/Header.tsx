@@ -33,7 +33,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6 text-primary" />
-          <span className="text-xl font-semibold text-foreground">Zenith Studio</span>
+          <span className="text-xl font-semibold text-foreground">Nexus AG</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -58,7 +58,7 @@ export function Header() {
             <div className="grid gap-4 p-6">
               <Link href="#home" className="flex items-center gap-2 mb-4" prefetch={false} onClick={() => setMobileMenuOpen(false)}>
                 <MountainIcon className="h-6 w-6 text-primary" />
-                <span className="text-xl font-semibold text-foreground">Zenith Studio</span>
+                <span className="text-xl font-semibold text-foreground">Nexus AG</span>
               </Link>
               {navLinks.map((link) => (
                 <Link
