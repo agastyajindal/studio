@@ -1,38 +1,4 @@
-import type { PortfolioItem, BlogPost } from '@/types';
-
-export const portfolioItems: PortfolioItem[] = [
-  {
-    id: '1',
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform with admin dashboard and payment integration, built with Next.js and Stripe.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    altText: 'Screenshot of an e-commerce platform dashboard showing sales analytics.',
-    imageHint: 'software interface',
-    liveUrl: '#',
-    githubUrl: '#',
-    tags: ['Next.js', 'React', 'Stripe', 'TypeScript'],
-  },
-  {
-    id: '2',
-    title: 'AI Powered Code Assistant',
-    description: 'A VS Code extension that provides AI-powered code suggestions and autocompletion to boost developer productivity.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    altText: 'VS Code editor showing AI code suggestions highlighted within a code file.',
-    imageHint: 'code editor',
-    githubUrl: '#',
-    tags: ['AI', 'VS Code', 'TypeScript', 'Machine Learning'],
-  },
-  {
-    id: '3',
-    title: 'Mobile Fitness Tracker',
-    description: 'A cross-platform mobile app for tracking fitness activities, setting goals, and visualizing progress. Developed with React Native.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    altText: 'Mobile app interface showing a fitness activity summary screen with charts.',
-    imageHint: 'mobile app',
-    liveUrl: '#',
-    tags: ['React Native', 'Mobile App', 'Firebase', 'UI/UX'],
-  },
-];
+import type { BlogPost } from '@/types';
 
 export const blogPosts: BlogPost[] = [
   {
@@ -67,5 +33,38 @@ export const blogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     altText: 'A developer working on a laptop with lines of code visible on the screen.',
     imageHint: 'coding screen',
+  },
+  {
+    id: '4',
+    title: 'Advanced Tailwind CSS Techniques',
+    date: 'January 10, 2024',
+    summary: 'Unlock the full potential of Tailwind CSS with advanced techniques for responsive design, custom theming, and performance optimization.',
+    slug: 'advanced-tailwind-css-techniques',
+    category: 'Frontend',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'A vibrant abstract design representing Tailwind CSS utility classes.',
+    imageHint: 'abstract design',
+  },
+  {
+    id: '5',
+    title: 'Building Scalable APIs with Genkit',
+    date: 'February 22, 2024',
+    summary: 'Learn how to leverage Genkit to build robust and scalable APIs, focusing on best practices for AI integration and data handling.',
+    slug: 'scalable-apis-with-genkit',
+    category: 'Backend & AI',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'Network diagram illustrating API connections and data flow.',
+    imageHint: 'network diagram',
+  },
+  {
+    id: '6',
+    title: 'Optimizing React Performance: A Comprehensive Guide',
+    date: 'March 05, 2024',
+    summary: 'A comprehensive guide to optimizing React application performance, covering memoization, code splitting, and virtual DOM.',
+    slug: 'optimizing-react-performance',
+    category: 'React',
+    imageUrl: 'https://placehold.co/600x400.png',
+    altText: 'A graph showing performance improvement over time.',
+    imageHint: 'performance graph',
   },
 ];
