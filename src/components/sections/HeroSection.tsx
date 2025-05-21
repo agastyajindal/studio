@@ -63,9 +63,7 @@ export function HeroSection() {
             <Button asChild size="lg" className="transition-transform hover:scale-105">
               <Link href="#blog">View My Blog</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="transition-transform hover:scale-105">
-              <Link href="#contact">Get In Touch</Link>
-            </Button>
+            {/* The "Get In Touch" button was previously here */}
           </div>
         </div>
         <div className="flex justify-center">
@@ -82,4 +80,3 @@ export function HeroSection() {
     </SectionWrapper>
   );
 }
-
