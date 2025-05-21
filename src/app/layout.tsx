@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({ // Corrected instantiation
 });
 
 export const metadata: Metadata = {
-  title: 'Agastya Jindal',
-  description: 'Personal blog and portfolio of a creative software developer. Crafted by Agastya Jindal.',
+  title: 'ZeroCore',
+  description: 'ZeroCore: Personal blog and portfolio of creative software developer Agastya Jindal.',
 };
 
 export default function RootLayout({
