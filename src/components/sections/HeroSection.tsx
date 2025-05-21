@@ -10,7 +10,7 @@ export function HeroSection() {
       <div className="grid items-center gap-8 md:grid-cols-2 lg:gap-16">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Hi, I&apos;m Nexus AG
+            Hi, I&apos;m Agastya Jindal
           </h1>
           <p className="text-lg text-muted-foreground md:text-xl">
             A passionate Software Developer & UI/UX Enthusiast, dedicated to crafting beautiful, functional, and user-centric digital experiences. Welcome to my personal space where I share my work and thoughts.
@@ -28,10 +28,10 @@ export function HeroSection() {
           <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 ring-4 ring-primary/50 ring-offset-4 ring-offset-background shadow-2xl">
             <AvatarImage 
               src="https://placehold.co/400x400.png" 
-              alt="Headshot of Nexus AG"
+              alt="Headshot of Agastya Jindal"
               data-ai-hint="professional portrait" 
             />
-            <AvatarFallback>NA</AvatarFallback>
+            <AvatarFallback>AJ</AvatarFallback>
           </Avatar>
         </div>
       </div>
