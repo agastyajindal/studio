@@ -4,7 +4,7 @@ import { BlogPostCard } from '@/components/BlogPostCard';
 
 export function BlogSection() {
   return (
-    <SectionWrapper id="blog" className="bg-secondary/50">
+    <SectionWrapper id="blog" className="bg-secondary/50" applyAnimation={false}>
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">From the Blog</h2>
         <p className="mt-4 text-lg text-muted-foreground">

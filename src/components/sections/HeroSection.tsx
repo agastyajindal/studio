@@ -51,7 +51,8 @@ export function HeroSection() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 grid items-center gap-8 md:grid-cols-2 lg:gap-16 animate-fade-in-up opacity-0" style={{animationFillMode: 'forwards'}}>
+      {/* The 'animate-fade-in-up' utility defined in tailwind.config.ts already includes 'forwards', so style={{animationFillMode: 'forwards'}} was redundant. */}
+      <div className="relative z-10 grid items-center gap-8 md:grid-cols-2 lg:gap-16 animate-fade-in-up opacity-0">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
             Hi, I&apos;m Agastya Jindal
@@ -63,7 +64,6 @@ export function HeroSection() {
             <Button asChild size="lg" className="transition-transform hover:scale-105">
               <Link href="#blog">View My Blog</Link>
             </Button>
-            {/* The "Get In Touch" button was previously here */}
           </div>
         </div>
         <div className="flex justify-center">
