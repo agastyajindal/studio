@@ -37,9 +37,9 @@ export function HeroSection() {
         <Image
           src="https://placehold.co/1920x1080.png"
           alt="Abstract parallax background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20 dark:opacity-15"
+          fill
+          sizes="100vw"
+          className="opacity-20 dark:opacity-15 object-cover"
           data-ai-hint="geometric pattern"
           priority
         />

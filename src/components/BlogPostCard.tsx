@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import type { BlogPost } from '@/types';
@@ -17,8 +18,9 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
         <Image
           src={post.imageUrl}
           alt={post.altText}
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
           data-ai-hint={post.imageHint}
         />
       </div>

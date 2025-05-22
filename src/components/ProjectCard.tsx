@@ -18,8 +18,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Image
           src={project.imageUrl}
           alt={project.altText}
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
           data-ai-hint={project.imageHint}
         />
       </div>
