@@ -6,62 +6,62 @@
 @layer base {
   :root {
     --background: 0 0% 98%; /* Very light gray / off-white */
-    --foreground: 220 20% 25%; /* Dark grayish blue */
+    --foreground: 0 0% 15%; /* Dark Gray */
 
     --card: 0 0% 100%; /* white */
-    --card-foreground: 220 20% 25%;
+    --card-foreground: 0 0% 15%; /* Dark Gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 25%;
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 0 0% 15%; /* Dark Gray */
 
-    --primary: 210 75% 50%; /* Professional Blue */
+    --primary: 270 70% 62%; /* Vibrant Lilac */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 210 20% 94%; /* Light grayish blue, for subtle backgrounds */
-    --secondary-foreground: 220 20% 35%; /* Darker grayish blue text on secondary */
+    --secondary: 0 0% 96%; /* Light Gray */
+    --secondary-foreground: 0 0% 25%; /* Dark Gray text on secondary */
 
-    --muted: 210 20% 90%; /* Slightly darker light grayish blue */
-    --muted-foreground: 220 15% 50%; /* Muted grayish blue text */
+    --muted: 0 0% 92%; /* Slightly darker light gray */
+    --muted-foreground: 0 0% 45%; /* Medium gray text */
 
-    --accent: 270 60% 65%; /* Lilac Purple */
+    --accent: 270 60% 65%; /* Existing Lilac Purple */
     --accent-foreground: 0 0% 100%; /* White text on accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 20% 88%; /* Light grayish blue border */
+    --border: 0 0% 88%; /* Light Gray border */
     --input: 0 0% 100%; /* White input background */
-    --ring: 210 75% 50%; /* Primary blue for focus ring */
+    --ring: 270 70% 62%; /* Vibrant Lilac for focus ring */
     --radius: 0.5rem;
 
     /* Sidebar variables aligned with the new theme */
-    --sidebar-background: 210 30% 96%; /* Slightly tinted light gray */
-    --sidebar-foreground: 220 20% 25%;
-    --sidebar-primary: 210 75% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 60% 65%; /* Lilac Purple for sidebar */
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 210 20% 85%;
-    --sidebar-ring: 210 75% 50%;
+    --sidebar-background: 0 0% 97%; /* Light Gray */
+    --sidebar-foreground: 0 0% 20%; /* Dark Gray */
+    --sidebar-primary: 270 70% 62%; /* Vibrant Lilac */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 270 60% 65%; /* Existing Lilac Purple */
+    --sidebar-accent-foreground: 0 0% 100%; /* White */
+    --sidebar-border: 0 0% 85%; /* Light Gray */
+    --sidebar-ring: 270 70% 62%; /* Vibrant Lilac */
   }
 
   .dark {
-    --background: 220 20% 12%; /* Very dark desaturated blue */
+    --background: 0 0% 8%; /* Very dark gray */
     --foreground: 0 0% 95%;    /* Off-white text */
 
-    --card: 220 15% 18%;       /* Darker card bg */
+    --card: 0 0% 12%;       /* Dark gray card bg */
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 15% 18%;
+    --popover: 0 0% 12%; /* Dark gray popover bg */
     --popover-foreground: 0 0% 95%;
 
-    --primary: 210 75% 60%;   /* Slightly lighter Professional Blue for dark mode */
+    --primary: 270 70% 72%;   /* Brighter Lilac for dark mode */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 220 15% 22%;  /* Slightly lighter dark bg for secondary elements */
+    --secondary: 0 0% 14%;  /* Dark gray for secondary elements */
     --secondary-foreground: 0 0% 90%; /* Lighter off-white text on secondary */
 
-    --muted: 220 15% 22%;
+    --muted: 0 0% 18%; /* Dark gray for muted */
     --muted-foreground: 0 0% 70%; /* Lighter gray for muted text */
 
     --accent: 270 65% 70%;     /* Lighter Lilac Purple for dark mode */
@@ -70,19 +70,19 @@
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 30%;    /* Darker border */
-    --input: 220 15% 25%;     /* Dark input bg */
-    --ring: 210 75% 60%;     /* Primary blue for focus ring (dark mode version) */
+    --border: 0 0% 22%;    /* Dark Gray border */
+    --input: 0 0% 16%;     /* Dark Gray input bg */
+    --ring: 270 70% 72%;     /* Brighter Lilac for focus ring (dark mode version) */
     
     /* Dark Sidebar variables aligned with the new theme */
-    --sidebar-background: 220 20% 10%; /* Even darker for sidebar */
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 210 75% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-background: 0 0% 10%; /* Dark Gray for sidebar */
+    --sidebar-foreground: 0 0% 95%; /* Off-white */
+    --sidebar-primary: 270 70% 72%; /* Brighter Lilac */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
     --sidebar-accent: 270 65% 70%; /* Lighter Lilac for dark sidebar accents */
-    --sidebar-accent-foreground: 270 20% 15%;
-    --sidebar-border: 220 15% 25%;
-    --sidebar-ring: 210 75% 60%;
+    --sidebar-accent-foreground: 270 20% 15%; /* Dark purple */
+    --sidebar-border: 0 0% 20%; /* Dark Gray */
+    --sidebar-ring: 270 70% 72%; /* Brighter Lilac */
   }
 }
 
