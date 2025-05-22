@@ -18,12 +18,10 @@ export function SectionWrapper({
   return (
     <Component
       className={cn(
-        'py-16 md:py-24',
-        applyAnimation && 'animate-fade-in-up opacity-0', // Apply animation if true
+        'py-16 md:py-24 border-t border-[hsl(var(--border)_/_0.2)]', // Added subtle top border with 20% opacity
+        applyAnimation && 'animate-fade-in-up opacity-0',
         className
       )}
-      // The 'animate-fade-in-up' utility defined in tailwind.config.ts already includes 'forwards',
-      // so this explicit style was redundant.
       {...props}
     >
       <div className="container mx-auto px-4 md:px-6">
