@@ -1,6 +1,19 @@
 
 import type { BlogPost, Project } from '@/types';
 
+export const siteImages = {
+  heroBackground: {
+    url: 'https://placehold.co/1920x1080.png',
+    alt: 'Abstract parallax background',
+    hint: 'geometric pattern',
+  },
+  avatar: {
+    url: 'https://placehold.co/400x400.png',
+    alt: 'Headshot of Agastya Jindal',
+    hint: 'professional portrait',
+  },
+};
+
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
@@ -117,3 +130,4 @@ export const projectData: Project[] = [
     date: 'January 2024',
   },
 ];
+

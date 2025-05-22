@@ -6,16 +6,16 @@ import { Button } from '@/components/ui/button';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
+import { siteImages } from '@/lib/data'; // Import siteImages
 
 export function HeroSection() {
   const parallaxBgRef = useRef<HTMLDivElement>(null);
 
-  // Memoized scroll handler for updates
   const handleScrollUpdates = useCallback(() => {
     if (parallaxBgRef.current) {
       window.requestAnimationFrame(() => {
-        if (parallaxBgRef.current) { // Check ref again inside RAF
+        if (parallaxBgRef.current) {
           parallaxBgRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
         }
       });
@@ -23,12 +23,10 @@ export function HeroSection() {
   }, []);
 
   useEffect(() => {
-    // Set initial position directly
     if (parallaxBgRef.current) {
       parallaxBgRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
     }
 
-    // Add listener for subsequent updates
     window.addEventListener('scroll', handleScrollUpdates, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScrollUpdates);
@@ -47,12 +45,12 @@ export function HeroSection() {
         className="absolute inset-0 z-[-1]"
       >
         <Image
-          src="https://placehold.co/1920x1080.png"
-          alt="Abstract parallax background"
+          src={siteImages.heroBackground.url}
+          alt={siteImages.heroBackground.alt}
           fill
           sizes="100vw"
           className="opacity-20 dark:opacity-15 object-cover"
-          data-ai-hint="geometric pattern"
+          data-ai-hint={siteImages.heroBackground.hint}
           priority
         />
       </div>
@@ -75,9 +73,9 @@ export function HeroSection() {
         <div className="flex justify-center">
           <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 ring-4 ring-primary/50 ring-offset-4 ring-offset-background shadow-2xl">
             <AvatarImage
-              src="https://placehold.co/400x400.png"
-              alt="Headshot of Agastya Jindal"
-              data-ai-hint="professional portrait"
+              src={siteImages.avatar.url}
+              alt={siteImages.avatar.alt}
+              data-ai-hint={siteImages.avatar.hint}
             />
             <AvatarFallback>AJ</AvatarFallback>
           </Avatar>
@@ -86,3 +84,4 @@ export function HeroSection() {
     </SectionWrapper>
   );
 }
+
