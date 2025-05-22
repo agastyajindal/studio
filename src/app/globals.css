@@ -1,87 +1,88 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 96%; /* #F5F5F5 off-white */
-    --foreground: 285 38% 15%; /* #301934 dark purple */
+    --background: 0 0% 98%; /* Very light gray / off-white */
+    --foreground: 220 20% 25%; /* Dark grayish blue */
 
     --card: 0 0% 100%; /* white */
-    --card-foreground: 285 38% 15%;
+    --card-foreground: 220 20% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 285 38% 15%;
+    --popover-foreground: 220 20% 25%;
 
-    --primary: 258 100% 79%; /* #B694FF lilac purple */
-    --primary-foreground: 285 38% 15%; /* dark purple text on lilac */
+    --primary: 210 75% 50%; /* Professional Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 0 0% 90%; /* darker off-white */
-    --secondary-foreground: 285 38% 15%;
+    --secondary: 210 20% 94%; /* Light grayish blue, for subtle backgrounds */
+    --secondary-foreground: 220 20% 35%; /* Darker grayish blue text on secondary */
 
-    --muted: 0 0% 93%;
-    --muted-foreground: 285 25% 40%; /* slightly lighter dark purple */
+    --muted: 210 20% 90%; /* Slightly darker light grayish blue */
+    --muted-foreground: 220 15% 50%; /* Muted grayish blue text */
 
-    --accent: 258 100% 79%; /* lilac purple */
-    --accent-foreground: 285 38% 15%;
+    --accent: 25 90% 60%; /* Warm Coral/Orange */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 88%; /* adjusted for better visibility on off-white */
-    --input: 0 0% 100%;
-    --ring: 258 100% 79%; /* lilac for focus */
+    --border: 210 20% 88%; /* Light grayish blue border */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 210 75% 50%; /* Primary blue for focus ring */
     --radius: 0.5rem;
 
     /* Sidebar variables aligned with the new theme */
-    --sidebar-background: 0 0% 98%; /* Light gray, distinct from main bg */
-    --sidebar-foreground: 285 38% 15%;
-    --sidebar-primary: 258 100% 79%;
-    --sidebar-primary-foreground: 285 38% 15%;
-    --sidebar-accent: 258 90% 85%; /* Lighter lilac for sidebar accents */
-    --sidebar-accent-foreground: 285 38% 15%;
-    --sidebar-border: 0 0% 88%;
-    --sidebar-ring: 258 100% 79%;
+    --sidebar-background: 210 30% 96%; /* Slightly tinted light gray */
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 210 75% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 90% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 20% 85%;
+    --sidebar-ring: 210 75% 50%;
   }
 
   .dark {
-    --background: 285 10% 12%; /* #1E1923 Very dark purple/near black */
-    --foreground: 0 0% 96%;    /* #F5F5F5 Off-white text */
+    --background: 220 20% 12%; /* Very dark desaturated blue */
+    --foreground: 0 0% 95%;    /* Off-white text */
 
-    --card: 285 10% 18%;       /* #2A2430 Darker card bg */
-    --card-foreground: 0 0% 96%;
+    --card: 220 15% 18%;       /* Darker card bg */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 285 10% 18%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 220 15% 18%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 258 100% 79%;   /* #B694FF Lilac Purple - remains vibrant */
-    --primary-foreground: 285 38% 15%; /* Dark purple text on lilac */
+    --primary: 210 75% 60%;   /* Slightly lighter Professional Blue for dark mode */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 285 10% 22%;  /* #342E3B Slightly lighter dark bg */
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 220 15% 22%;  /* Slightly lighter dark bg for secondary elements */
+    --secondary-foreground: 0 0% 90%; /* Lighter off-white text on secondary */
 
-    --muted: 285 10% 22%;
+    --muted: 220 15% 22%;
     --muted-foreground: 0 0% 70%; /* Lighter gray for muted text */
 
-    --accent: 258 100% 79%;     /* Lilac Purple */
-    --accent-foreground: 285 38% 15%; 
+    --accent: 25 90% 65%;     /* Slightly lighter Warm Coral/Orange for dark mode */
+    --accent-foreground: 220 20% 15%; /* Dark text on accent for contrast */
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 285 10% 30%;    /* #4A4153 Darker border */
-    --input: 285 10% 25%;     /* #3C3645 Dark input bg */
-    --ring: 258 100% 79%;     /* Lilac focus ring */
+    --border: 220 15% 30%;    /* Darker border */
+    --input: 220 15% 25%;     /* Dark input bg */
+    --ring: 210 75% 60%;     /* Primary blue for focus ring (dark mode version) */
     
     /* Dark Sidebar variables aligned with the new theme */
-    --sidebar-background: 285 10% 10%; /* Even darker for sidebar */
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 258 100% 79%;
-    --sidebar-primary-foreground: 285 38% 15%;
-    --sidebar-accent: 258 80% 70%; /* Slightly muted lilac for dark sidebar accents */
-    --sidebar-accent-foreground: 285 38% 15%;
-    --sidebar-border: 285 10% 25%;
-    --sidebar-ring: 258 100% 79%;
+    --sidebar-background: 220 20% 10%; /* Even darker for sidebar */
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 85% 60%; /* Muted coral for dark sidebar accents */
+    --sidebar-accent-foreground: 220 20% 15%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 210 75% 60%;
   }
 }
 
