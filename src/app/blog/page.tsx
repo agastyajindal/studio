@@ -5,7 +5,7 @@ import { SectionWrapper } from '@/components/layout/SectionWrapper';
 
 export default function BlogPage() {
   return (
-    <SectionWrapper className="py-12 md:py-16">
+    <SectionWrapper className="py-12 md:py-16" applyAnimation={false}>
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Blog</h1>
         <p className="mt-4 text-lg text-muted-foreground">
@@ -22,4 +22,3 @@ export default function BlogPage() {
     </SectionWrapper>
   );
 }
-
