@@ -13,26 +13,25 @@ export function HeroSection() {
 
   const handleScroll = useCallback(() => {
     setOffsetY(window.scrollY);
-  }, []); // setOffsetY is stable, so empty dependency array is fine.
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    // Initial call to set position if already scrolled
-    handleScroll();
+    handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]); // Add handleScroll as a dependency
+  }, [handleScroll]);
 
   return (
     <SectionWrapper
       id="home"
       className="bg-transparent min-h-screen flex items-center !pt-24 md:!pt-32 relative overflow-hidden"
-      applyAnimation={false} // Disable default fade-in for this section to let parallax be the main focus
+      applyAnimation={false}
     >
       {/* Parallax Background Image */}
       <div
         className="absolute inset-0 z-[-1] transition-transform duration-100 ease-out"
         style={{
-          transform: `translateY(${offsetY * 0.4}px)`, // Adjust 0.4 for more/less parallax
+          transform: `translateY(${offsetY * 0.4}px)`,
         }}
       >
         <Image
@@ -40,9 +39,9 @@ export function HeroSection() {
           alt="Abstract parallax background"
           layout="fill"
           objectFit="cover"
-          className="opacity-20 dark:opacity-15" // Subtle opacity
-          data-ai-hint="abstract texture"
-          priority // Important for LCP
+          className="opacity-20 dark:opacity-15"
+          data-ai-hint="geometric pattern"
+          priority
         />
       </div>
 
