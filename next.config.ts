@@ -10,7 +10,12 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      // Removed placehold.co as images are now local
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
