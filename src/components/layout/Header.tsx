@@ -7,9 +7,10 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#blog', label: 'Blog' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '#contact', label: 'Contact' }, // Contact section is on the homepage
 ];
 
 // MountainIcon component (re-added)
@@ -54,7 +55,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#home" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-7 text-primary" />
           <span className="text-xl font-semibold text-foreground">ZeroCore</span>
         </Link>
@@ -64,7 +65,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-              prefetch={false}
+              prefetch={link.href.startsWith('/') ? false : undefined} // Only prefetch internal links if needed
             >
               {link.label}
             </Link>
@@ -79,7 +80,7 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="grid gap-4 p-6">
-              <Link href="#home" className="flex items-center gap-2 mb-4" prefetch={false} onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/" className="flex items-center gap-2 mb-4" prefetch={false} onClick={() => setMobileMenuOpen(false)}>
                 <MountainIcon className="h-7 text-primary" />
                 <span className="text-xl font-semibold text-foreground">ZeroCore</span>
               </Link>
@@ -88,7 +89,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
-                  prefetch={false}
+                  prefetch={link.href.startsWith('/') ? false : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

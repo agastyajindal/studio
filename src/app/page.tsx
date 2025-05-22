@@ -1,7 +1,9 @@
+
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { BlogSection } from '@/components/sections/BlogSection';
+import { ProjectsSection } from '@/components/sections/ProjectsSection'; // New import
 import { ContactSection } from '@/components/sections/ContactSection';
 
 export default function HomePage() {
@@ -10,6 +12,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <ProjectsSection /> {/* Added ProjectsSection */}
         <BlogSection />
         <ContactSection />
       </main>
