@@ -10,10 +10,10 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
-  { href: '#contact', label: 'Contact' }, // Contact section is on the homepage
+  { href: '#footer', label: 'Contact' }, // Updated href to point to footer
 ];
 
-// MountainIcon component (re-added)
+// MountainIcon component
 function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
