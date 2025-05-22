@@ -6,29 +6,25 @@ import { Button } from '@/components/ui/button';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export function HeroSection() {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => {
-    // Ensure this only runs on the client
-    if (typeof window !== "undefined") {
-      setOffsetY(window.scrollY);
-    }
-  };
+
+  const handleScroll = useCallback(() => {
+    setOffsetY(window.scrollY);
+  }, []); // setOffsetY is stable, so empty dependency array is fine.
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener('scroll', handleScroll);
-      // Initial call to set position if already scrolled
-      handleScroll(); 
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    // Initial call to set position if already scrolled
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]); // Add handleScroll as a dependency
 
   return (
-    <SectionWrapper 
-      id="home" 
+    <SectionWrapper
+      id="home"
       className="bg-transparent min-h-screen flex items-center !pt-24 md:!pt-32 relative overflow-hidden"
       applyAnimation={false} // Disable default fade-in for this section to let parallax be the main focus
     >
@@ -51,7 +47,6 @@ export function HeroSection() {
       </div>
 
       {/* Foreground Content */}
-      {/* The 'animate-fade-in-up' utility defined in tailwind.config.ts already includes 'forwards', so style={{animationFillMode: 'forwards'}} was redundant. */}
       <div className="relative z-10 grid items-center gap-8 md:grid-cols-2 lg:gap-16 animate-fade-in-up opacity-0">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
@@ -68,10 +63,10 @@ export function HeroSection() {
         </div>
         <div className="flex justify-center">
           <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 ring-4 ring-primary/50 ring-offset-4 ring-offset-background shadow-2xl">
-            <AvatarImage 
-              src="https://placehold.co/400x400.png" 
+            <AvatarImage
+              src="https://placehold.co/400x400.png"
               alt="Headshot of Agastya Jindal"
-              data-ai-hint="professional portrait" 
+              data-ai-hint="professional portrait"
             />
             <AvatarFallback>AJ</AvatarFallback>
           </Avatar>

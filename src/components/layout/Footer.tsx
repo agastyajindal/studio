@@ -1,8 +1,17 @@
+
+"use client";
+
 import Link from 'next/link';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear()); // Initialize with current year
+
+  useEffect(() => {
+    // Ensure the client-side value is up-to-date after hydration
+    setCurrentYear(new Date().getFullYear());
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <footer className="bg-muted py-8 text-muted-foreground">
