@@ -6,19 +6,30 @@ import { Button } from '@/components/ui/button';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 export function HeroSection() {
-  const [offsetY, setOffsetY] = useState(0);
+  const parallaxBgRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = useCallback(() => {
-    setOffsetY(window.scrollY);
+    if (parallaxBgRef.current) {
+      window.requestAnimationFrame(() => {
+        if (parallaxBgRef.current) { // Check ref again inside RAF
+          parallaxBgRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+        }
+      });
+    }
   }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Initial call to set position.
+    // It's called directly here, assuming the ref is available after the initial render.
+    handleScroll(); 
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [handleScroll]);
 
   return (
@@ -29,10 +40,9 @@ export function HeroSection() {
     >
       {/* Parallax Background Image */}
       <div
-        className="absolute inset-0 z-[-1] transition-transform duration-100 ease-out"
-        style={{
-          transform: `translateY(${offsetY * 0.4}px)`,
-        }}
+        ref={parallaxBgRef}
+        className="absolute inset-0 z-[-1]" // Removed transition-transform, duration-100, ease-out
+        // Transform style is now set by JS via the ref
       >
         <Image
           src="https://placehold.co/1920x1080.png"
