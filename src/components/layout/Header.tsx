@@ -42,13 +42,15 @@ export function Header() {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
+    // Initial check in case page loads scrolled
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 shadow-lg backdrop-blur-md' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 bg-card shadow-lg transition-all duration-300 ${
+        isScrolled ? 'bg-opacity-90 backdrop-blur-md' : 'bg-opacity-100'
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
