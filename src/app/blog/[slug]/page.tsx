@@ -93,11 +93,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <Image
                 src={post.imageUrl}
                 alt={post.altText}
-                fill // Changed from layout="fill" to fill for Next 13+
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Example sizes, adjust as needed
-                className="rounded-lg shadow-lg object-cover" // Ensure object-cover
+                fill
+                sizes="(max-width: 768px) 100vw, 768px" // Adjusted sizes for max-w-3xl container
+                className="rounded-lg shadow-lg object-cover"
                 data-ai-hint={post.imageHint}
-                priority // Consider adding priority for LCP if this is a key image
+                priority // Added priority for LCP
               />
             </div>
           )}
