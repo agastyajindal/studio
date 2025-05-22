@@ -11,7 +11,8 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 export function HeroSection() {
   const parallaxBgRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = useCallback(() => {
+  // Memoized scroll handler for updates
+  const handleScrollUpdates = useCallback(() => {
     if (parallaxBgRef.current) {
       window.requestAnimationFrame(() => {
         if (parallaxBgRef.current) { // Check ref again inside RAF
@@ -22,15 +23,17 @@ export function HeroSection() {
   }, []);
 
   useEffect(() => {
-    // Initial call to set position.
-    // It's called directly here, assuming the ref is available after the initial render.
-    handleScroll(); 
+    // Set initial position directly
+    if (parallaxBgRef.current) {
+      parallaxBgRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+    }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Add listener for subsequent updates
+    window.addEventListener('scroll', handleScrollUpdates, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScrollUpdates);
     };
-  }, [handleScroll]);
+  }, [handleScrollUpdates]);
 
   return (
     <SectionWrapper
@@ -41,8 +44,7 @@ export function HeroSection() {
       {/* Parallax Background Image */}
       <div
         ref={parallaxBgRef}
-        className="absolute inset-0 z-[-1]" // Removed transition-transform, duration-100, ease-out
-        // Transform style is now set by JS via the ref
+        className="absolute inset-0 z-[-1]"
       >
         <Image
           src="https://placehold.co/1920x1080.png"
