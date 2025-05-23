@@ -1,5 +1,4 @@
-# Firebase Studio
+# Blog site made by Agastya Jindal
 
-This is a NextJS starter in Firebase Studio.
+This is a next.js framework based site, uses genkit and gemini.
 
-To get started, take a look at src/app/page.tsx.
